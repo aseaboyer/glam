@@ -7,6 +7,10 @@
 <title>glam - animated cube</title>
 
 <style>
+body {
+	margin:0;
+	padding:0;
+}
   #photocube {
     image:url(images/flowers.jpg);
     rx:30deg;
@@ -43,6 +47,32 @@
     shader:phong;
     rx:30deg;
   }
+  
+#ui {
+	background-color:rgba( 0,0,0, 0.7 );
+	bottom:0;
+	height:400px;
+	position:absolute;
+	width:100%;
+}
+
+#players, #enemies {
+	width:30%;
+}
+#players {
+	float:left;
+}
+#enemies {
+	float:right;
+}
+
+.player, .enemy {
+	background-color:rgba( 256, 256, 256, 0.3 );
+	border-radius:5px;
+	height:60px;
+	margin-bottom:5px;
+	width:100%;
+}
 </style>
 <script>
 $(document).ready(function(){
@@ -56,17 +86,46 @@ $(document).ready(function(){
 <!-- 
 glam - Simple scene with cube
  -->
-<div id="container" style="width:600px; height:600px;">
+<div id="container" style="width:100%;height:600px;">
 <glam>
 	<scene>
 <!--	<cube id="photocube" class="animRotateY"></cube>	-->
 	<cylinder id="cylinder1" class="animRotateY"></cylinder>
 	<cylinder id="cylinder2" class="animRotateY"></cylinder>
-	<import id="ground_obj" src="test/models/ground.dae" ></import>
+<!--	<import id="ground_obj" src="test/models/ground.dae" ></import> -->
 	</scene>
 </glam>
 </div>
-
+<div id="ui">
+	<div id="players">
+		<div class="player">
+			<span>Name 1</span>
+		</div>
+		<div class="player">
+			<span>Name 1</span>
+		</div>
+		<div class="player">
+			<span>Name 1</span>
+		</div>
+		<div class="player">
+			<span>Name 1</span>
+		</div>
+	</div>
+	<div id="enemies">
+		<div class="enemy">
+			<span>Name 1</span>
+		</div>
+		<div class="enemy">
+			<span>Name 1</span>
+		</div>
+		<div class="enemy">
+			<span>Name 1</span>
+		</div>
+		<div class="enemy">
+			<span>Name 1</span>
+		</div>
+	</div>
+</div>
 
 </body>
 </html>
