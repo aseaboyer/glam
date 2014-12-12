@@ -71,6 +71,8 @@ body {
 }
 
 .player, .enemy {
+	border-left:5px solid #000;
+	border-right:5px solid #000;
 	background-color:rgba( 256, 256, 256, 0.3 );
 	border-radius:5px;
 	height:60px;
@@ -107,9 +109,14 @@ body {
 
 .player .skills li, .enemy .skills li {
 	list-style-type:none;
+	margin:5px 0;
 }
 .player:hover .skills, .enemy:hover .skills { /* actually, should use jquery instead */
 	display:block;
+}
+
+.player .skills li:hover, .enemy .skills li:hover {
+	text-decoration:underline;
 }
 
 .nameplate {
