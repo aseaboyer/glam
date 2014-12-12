@@ -67,7 +67,7 @@ body {
 }
 #enemies {
 	float:right;
-	margin:0 10px;
+	margin:0 20px;
 }
 
 .player, .enemy {
@@ -79,6 +79,12 @@ body {
 	margin-bottom:5px;
 	position:relative;
 	width:100%;
+}
+.player:hover {
+	left:10px;
+}
+.enemy:hover {
+	right:10px
 }
 
 .skills {
@@ -251,6 +257,7 @@ jQuery(document).ready(function(){
 				<li class="skill">skill 4</li>
 			</ul>
 		</div>
+		Enemy skills wont be available. Display stats instead?
 	</div>
 </div>
 
